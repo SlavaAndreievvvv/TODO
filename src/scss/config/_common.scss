@@ -5,6 +5,13 @@
 *::before {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+a,
+button,
+input {
+  cursor: pointer;
 }
 
 html {
@@ -18,7 +25,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: calc(800px + v.$mobile-container-padding-x);
+  max-width: calc(1366px + v.$mobile-container-padding-x);
   padding: {
     left: v.$mobile-container-padding-x;
     right: v.$mobile-container-padding-x;
@@ -26,5 +33,12 @@ body {
   margin: {
     left: auto;
     right: auto;
+  }
+  @media (min-width: 768px) {
+  max-width: calc(1366px + v.$tablet-container-padding-x);
+  padding: {
+    left: v.$tablet-container-padding-x;
+    right: v.$tablet-container-padding-x;
+  }
   }
 }

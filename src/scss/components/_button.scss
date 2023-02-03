@@ -1,0 +1,27 @@
+@use 'utils';
+
+.button {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #C4C4C4;
+  background-color: white;
+  outline: none;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  transition: color .3s ease;
+
+
+  &__plus {
+    margin-right: 5px;
+    fill: #C4C4C4;
+    transition: fill .1s ease;
+  }
+}
+.active {
+  color: #3257FB;
+  fill: #3257FB;
+}

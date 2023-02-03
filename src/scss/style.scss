@@ -3,6 +3,30 @@
 @use './config/common';
 
 // Components
+@use './components/checkbox';
+@use './components/caption';
 @use './components/title';
-@use './components/cover';
-@use './components/index-page';
+@use './components/button-remove';
+@use './components/button';
+@use './components/input';
+@use './components/task';
+@use './components/tasks-list';
+@use './components/todo';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
