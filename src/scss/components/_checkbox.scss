@@ -5,6 +5,7 @@
   display: inline-flex;
   align-items: center;
   position: relative;
+  margin-right: 40px;
 
   &__input {
     position: absolute;
@@ -35,8 +36,8 @@
   }
   &__button {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     background: #FFFFFF;
     border: 1px solid #C4C4C4;
     border-radius: 4px;
