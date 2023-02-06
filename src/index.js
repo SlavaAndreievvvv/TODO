@@ -67,10 +67,15 @@ async function getOrFetchTodo() {
 }
 
 function toggleTodoElement($todo, checked) {
-  $todo.style.backgroundColor = checked ? "#D7DCFF" : "white";
+  if (checked) {
+    $todo.classList.add('done');
+  } else {
+    $todo.classList.remove('done');
+  }
   const $input = $todo.querySelector("input");
   $input.checked = checked;
 }
+
 
 function generalListItem ({id, title, completed}) {
 
@@ -125,6 +130,7 @@ function generalListItem ({id, title, completed}) {
   </svg>
 `
   toggleTodoElement($div, completed);
+  
 
   $toggle.addEventListener('change', (e) => {
     const { checked } = e.target;
@@ -199,10 +205,11 @@ function addNewTodo(title) {
   saveToCache([newTodo, ...getCacheData()]);
   const $todoList = document.getElementById(LIST_ID);
   const $newTodoItem = generalListItem(newTodo);
-  $newTodoItem.style.backgroundColor = "#ECFFFA";
+  $newTodoItem.classList.add('new-todo');
   setTimeout(() => {
-    $newTodoItem.style.backgroundColor = null;
-  }, 10000);
+    $newTodoItem.classList.remove('new-todo');
+  }, 1000);
+
   $todoList.prepend($newTodoItem);
 }
 
