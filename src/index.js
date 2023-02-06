@@ -208,7 +208,7 @@ function addNewTodo(title) {
   $newTodoItem.classList.add('new-todo');
   setTimeout(() => {
     $newTodoItem.classList.remove('new-todo');
-  }, 1000);
+  }, 10000);
 
   $todoList.prepend($newTodoItem);
 }
