@@ -2,17 +2,72 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./scss/style.scss" />
-    <title>Parcel by Merge</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/svg/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/svg/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/svg/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/svg/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./assets/svg/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>TODO</title>
   </head>
   <body>
-    <div class="container index-page">
-      <h1 class="title index-page__title">Parcel by Merge</h1>
-      <a href="https://merge.rocks" target="_blank" class="cover">
-        <img src="./assets/images/cover.png" alt="merge" />
-      </a>
-    </div>
+    <section id="section-todo" class="todo">
+      <div class="todo__header">
+        <div class="todo__header-wrapper container">
+          <h1 class="title todo__title">✏️ To do list</h1>
+          <form id="form" class="todo__form">
+            <input
+              type="text"
+              class="input todo__input"
+              placeholder="Enter the task"
+              name="todo"
+              required
+            />
+            <button class="button todo__button" id="add">
+              <svg
+                class="button__plus"
+                width="16"
+                height="17"
+                viewBox="0 0 16 17"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.66669 3.83335C8.66669 3.46516 8.36821 3.16669 8.00002 3.16669C7.63183 3.16669 7.33335 3.46516 7.33335 3.83335V7.83335H3.33335C2.96516 7.83335 2.66669 8.13183 2.66669 8.50002C2.66669 8.86821 2.96516 9.16669 3.33335 9.16669H7.33335V13.1667C7.33335 13.5349 7.63183 13.8334 8.00002 13.8334C8.36821 13.8334 8.66669 13.5349 8.66669 13.1667V9.16669H12.6667C13.0349 9.16669 13.3334 8.86821 13.3334 8.50002C13.3334 8.13183 13.0349 7.83335 12.6667 7.83335H8.66669V3.83335Z"
+                />
+              </svg>
+              Add New Task
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="todo__hero">
+        <h2 class="todo__caption caption">Tasks</h2>
+        <div id="todo-list" class="todo__tasks-list tasks-list"></div>
+      </div>
+    </section>
     <script type="module" src="./index.js"></script>
   </body>
 </html>

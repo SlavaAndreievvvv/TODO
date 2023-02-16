@@ -1,0 +1,59 @@
+@use 'utils';
+
+.checkbox {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  margin-right: 40px;
+
+  &__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    width: 25px;
+    height: 28px;
+
+
+    &:checked + .checkbox__button .checkbox__icon ~ .button-remove {
+      background-color: #D7DCFF;
+    }
+    &:checked + .checkbox__button .checkbox__icon {
+      opacity: 1;
+    }
+    &:hover + .checkbox__button {
+      border: 1px solid #3257FB;
+      box-shadow: 0 0 0 2px transparent;
+    }
+    &:checked + .checkbox__button {
+      background-color: #3257FB;
+      border: 1px solid #3257FB;
+      box-shadow: 0 0 0 2px transparent;
+    }
+    &:focus + .checkbox__button {
+      box-shadow: 0 0 0 2px #D7DCFF;
+    }
+  }
+  &__button {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-property: border-color background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    box-shadow: 0 0 0 2px transparent;
+  }
+  &__icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+    fill: white;
+    transition: opacity 0.2s ease;
+  }
+}

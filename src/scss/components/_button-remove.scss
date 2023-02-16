@@ -1,0 +1,41 @@
+@use 'utils';
+
+.button-remove {
+  position: relative; 
+  border: none;
+  outline: none;
+  width: 25px;
+  height: 21px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover .button-remove__img {
+    fill: #3257FB;
+  }
+  &:focus .button-remove__img {
+    border: 2px solid #D7DCFF;
+    fill: #6A6E74;
+  }
+  &:disabled {
+    fill: #C4C4C4;
+  }
+
+  &__img {
+    position: absolute;
+    display: block;
+    left: -3px;
+    top: -2px;
+    fill: #6A6E74;
+    width: 25px;
+    height: 24px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: all .2s ease;
+    pointer-events: none;
+  }
+}
+.button-remove.done {
+  background-color: #D7DCFF;
+}

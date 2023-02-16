@@ -1,0 +1,109 @@
+@use 'utils';
+
+.popup {
+  pointer-events: auto;
+  z-index: 100;
+  padding: 32px 16px 24px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  box-shadow: 0px 2px 15px rgba(169, 173, 187, 0.15);
+  border-radius: 4px;
+
+  &__text {
+  position: relative;
+  width: 288px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #292D32;
+  margin-bottom: 32px;
+  }
+  
+  &__wrapper {
+    width: 176px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__button {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    width: 80px;
+    height: 32px;
+    border: 1px solid #3257FB;
+    border-radius: 4px;
+    transition: all .2s ease;
+
+    &--secondary {
+      background-color: #3257FB;
+      color: white;
+      &:hover {
+        background-color: #1638CC;
+      }
+      &:focus {
+        box-shadow: 0 0 0 2px #D7DCFF;
+        background-color: #3257FB;
+      }
+      &:disabled {
+        background-color: #C4C4C4;
+      }
+    }
+    &--primary {
+      background-color: white;
+      color: #3257FB;
+       &:hover {
+        color: #1638CC;
+        border: 1px solid #1638CC;
+       }
+       &:focus {
+        box-shadow: 0 0 0 2px #D7DCFF;
+        color: #3257FB;
+        border: 1px solid #3257FB;
+       }
+       &:disabled {
+        color: #C4C4C4;
+        border: 1px solid #C4C4C4;
+       }
+    }
+  }
+  &__box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 99;
+      background-color: #1D28465E;
+      pointer-events: auto;
+      overflow: hidden;
+  }
+}
+
+
+
+.button-hide {
+  position: absolute;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  top: 20px;
+  left: 288px;
+  transition: all .2s ease;
+
+  &:hover .button-hide__icon {
+    fill: #b6bac4;
+  }
+
+  &__icon {
+    fill: #8A8E97;
+  }
+}
